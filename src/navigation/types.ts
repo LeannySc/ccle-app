@@ -5,6 +5,7 @@ import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 export type RootStackParamList = {
   LoginScreen: undefined; // undefined significa que no recibe parámetros
   HomeScreen: undefined;
+  MainApp: undefined;
 };
 
 // Este es el tipo que usaremos en nuestras pantallas

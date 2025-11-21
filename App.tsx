@@ -4,10 +4,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { LoginScreen } from "./src/screens/LoginScreen";
-import { HomeScreen } from "./src/screens/HomeScreen";
-import { RootStackParamList } from "./src/navigation/types"; // <-- IMPORTA LOS TIPOS
+import { TabNavigator } from "./src/navigation/TabNavigator"; // <-- IMPORTA TU TABNAVIGATOR
+import { RootStackParamList } from "./src/navigation/types";
 
-// Usa el tipo para darle poder a tu Stack Navigator
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
@@ -19,8 +18,10 @@ export default function App() {
           headerShown: false,
         }}
       >
+        {/* Sigue teniendo el login como antes */}
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        {/* ¡NUEVO! Añadimos el TabNavigator como una sola pantalla */}
+        <Stack.Screen name="MainApp" component={TabNavigator} />
       </Stack.Navigator>
     </NavigationContainer>
   );

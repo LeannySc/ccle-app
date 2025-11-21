@@ -8,7 +8,8 @@ import { colors } from "../styles/colors";
 // Usa el tipo para que sepa qué es 'navigation'
 export const LoginScreen = ({ navigation }: AppScreenProps<"LoginScreen">) => {
   const onLogin = () => {
-    navigation.navigate("HomeScreen");
+    // CAMBIA ESTA LÍNEA
+    navigation.navigate("MainApp"); // Antes era "HomeScreen"
   };
 
   return (
