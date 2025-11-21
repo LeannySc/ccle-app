@@ -6,6 +6,7 @@ export type RootStackParamList = {
   LoginScreen: undefined; // undefined significa que no recibe parámetros
   HomeScreen: undefined;
   MainApp: undefined;
+  MyOrders: undefined;
 };
 
 // Este es el tipo que usaremos en nuestras pantallas
