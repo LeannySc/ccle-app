@@ -8,18 +8,17 @@ import { colors } from "../styles/colors";
 // Usa el tipo para que sepa qué es 'navigation'
 export const LoginScreen = ({ navigation }: AppScreenProps<"LoginScreen">) => {
   const onLogin = () => {
-    // CAMBIA ESTA LÍNEA
     navigation.navigate("MainApp"); // Antes era "HomeScreen"
   };
 
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>CCLE</Text>
-      <Text style={styles.subtitle}>Compras Colectivas La Esmeralda</Text>
+      <Text style={styles.subtitle}></Text>
       <TextInput
         style={styles.input}
         placeholder="Correo Electrónico"
-        placeholderTextColor={colors.gray} // Pequeña mejora de accesibilidad
+        placeholderTextColor={colors.gray}
         keyboardType="email-address"
         autoCapitalize="none"
       />

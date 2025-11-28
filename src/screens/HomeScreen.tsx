@@ -2,9 +2,8 @@
 import React from "react";
 import { SafeAreaView, Text, FlatList } from "react-native";
 import { ProductCard } from "../components/ProductCard";
-import styles from "./HomeScreen.styles"; // <-- IMPORTA ESTILOS
+import styles from "./HomeScreen.styles";
 
-// Datos de ejemplo...
 const collectiveOrders = [
   {
     id: "1",
@@ -41,13 +40,11 @@ export const HomeScreen = () => {
         data={collectiveOrders}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
+          // El código corregido:
           <ProductCard
-            productName={item.name}
-            price={item.price}
-            imageUrl={item.imageUrl}
+            product={item}
             currentGoal={item.current}
             totalGoal={item.total}
-            onParticipate={() => alert(`Te uniste a ${item.name}`)}
           />
         )}
       />

@@ -23,9 +23,6 @@ export const TabNavigator = () => {
           borderTopColor: colors.border,
         },
         tabBarIcon: ({ focused, color, size }) => {
-          // CAMBIO #1: Declaramos el tipo explícitamente.
-          // Le decimos a TypeScript que iconName SÓLO puede ser uno de los nombres
-          // válidos para el componente Ionicons.
           let iconName: React.ComponentProps<typeof Ionicons>["name"];
 
           if (route.name === "Inicio") {
@@ -35,8 +32,6 @@ export const TabNavigator = () => {
           } else if (route.name === "Perfil") {
             iconName = focused ? "person-circle" : "person-circle-outline";
           } else {
-            // CAMBIO #2: Añadimos un 'else' para cualquier otro caso.
-            // Esto garantiza que iconName NUNCA será undefined.
             iconName = "help-circle";
           }
 

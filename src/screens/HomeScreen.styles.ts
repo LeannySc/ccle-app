@@ -1,4 +1,3 @@
-// src/screens/HomeScreen.styles.ts
 import { StyleSheet } from "react-native";
 import { colors } from "../styles/colors";
 
@@ -8,6 +7,8 @@ export default StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
+    marginTop: 20,
+    marginBottom: 5,
     marginVertical: 10,
     color: colors.text,
   },

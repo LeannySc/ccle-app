@@ -3,8 +3,6 @@ import { StyleSheet } from "react-native";
 import { colors } from "../styles/colors"; // Revisa que esta ruta sea correcta
 
 export default StyleSheet.create({
-  // Pega aquí todo el contenido de const styles que estaba en LoginScreen.tsx
-  // Reemplazando los colores en texto por las variables (ej: '#4CAF50' -> colors.primary)
   container: {
     flex: 1,
     justifyContent: "center",

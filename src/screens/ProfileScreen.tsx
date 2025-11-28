@@ -6,7 +6,6 @@ import { AppScreenProps } from "../navigation/types";
 import styles from "./ProfileScreen.styles";
 import { colors } from "../styles/colors";
 
-// ¡Importante! Tipar correctamente el hook de navegación
 type ProfileScreenNavigationProp = AppScreenProps<"MainApp">["navigation"];
 
 export const ProfileScreen = () => {
