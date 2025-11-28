@@ -9,3 +9,5 @@ export type RootStackParamList = {
 };
 export type AppScreenProps<T extends keyof RootStackParamList> =
   NativeStackScreenProps<RootStackParamList, T>;
+
+  
