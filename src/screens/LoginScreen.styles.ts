@@ -1,6 +1,6 @@
 // src/screens/LoginScreen.styles.ts
 import { StyleSheet } from "react-native";
-import { colors } from "../styles/colors"; // Revisa que esta ruta sea correcta
+import { colors } from "../styles/colors";
 
 export default StyleSheet.create({
   container: {

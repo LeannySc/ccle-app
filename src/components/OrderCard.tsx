@@ -3,7 +3,6 @@ import React from "react";
 import { View, Text } from "react-native";
 import styles from "./OrderCard.styles";
 
-// Definimos los posibles estados como un tipo para mayor seguridad
 export type OrderStatus = "CONSOLIDANDO" | "CONFIRMADO" | "EN REPARTO";
 
 interface Props {
@@ -12,7 +11,6 @@ interface Props {
   status: OrderStatus;
 }
 
-// Un objeto que mapea el estado a su estilo
 const statusStyles = {
   CONSOLIDANDO: styles.consolidando,
   CONFIRMADO: styles.confirmado,

@@ -40,7 +40,6 @@ export const HomeScreen = () => {
         data={collectiveOrders}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          // El código corregido:
           <ProductCard
             product={item}
             currentGoal={item.current}

@@ -27,7 +27,7 @@ export default StyleSheet.create({
     marginBottom: 16,
   },
   badgeContainer: {
-    alignSelf: "flex-start", // Para que el contenedor no ocupe todo el ancho
+    alignSelf: "flex-start",
     borderRadius: 15,
     paddingVertical: 5,
     paddingHorizontal: 15,
@@ -37,7 +37,6 @@ export default StyleSheet.create({
     fontWeight: "bold",
     fontSize: 14,
   },
-  // Estilos específicos para cada estado
   consolidando: {
     backgroundColor: "#FFA500", // Naranja
   },

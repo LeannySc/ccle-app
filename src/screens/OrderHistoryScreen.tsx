@@ -1,7 +1,7 @@
 // src/screens/OrderHistoryScreen.tsx
 import React from "react";
 import { View, Text } from "react-native";
-import { colors } from "../styles/colors"; // Reutilizamos el estilo del carrito
+import { colors } from "../styles/colors";
 
 export const OrderHistoryScreen = () => {
   return (

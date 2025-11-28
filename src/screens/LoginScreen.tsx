@@ -1,14 +1,13 @@
 // src/screens/LoginScreen.tsx
 import React from "react";
 import { Text, TextInput, Pressable, SafeAreaView, View } from "react-native";
-import { AppScreenProps } from "../navigation/types"; // <-- IMPORTA LOS TIPOS
-import styles from "./LoginScreen.styles"; // <-- IMPORTA ESTILOS
+import { AppScreenProps } from "../navigation/types";
+import styles from "./LoginScreen.styles";
 import { colors } from "../styles/colors";
 
-// Usa el tipo para que sepa qué es 'navigation'
 export const LoginScreen = ({ navigation }: AppScreenProps<"LoginScreen">) => {
   const onLogin = () => {
-    navigation.navigate("MainApp"); // Antes era "HomeScreen"
+    navigation.navigate("MainApp");
   };
 
   return (
