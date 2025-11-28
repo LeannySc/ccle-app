@@ -12,6 +12,7 @@ interface CartContextType {
   cart: Product[];
   addProductToCart: (product: Product) => void;
   removeProductFromCart: (productId: string) => void;
+  cartItemCount: number;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -30,11 +31,12 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     );
   };
 
+  const cartItemCount = cart.length;
+
   return (
     <CartContext.Provider
-      value={{ cart, addProductToCart, removeProductFromCart }}
+      value={{ cart, addProductToCart, removeProductFromCart, cartItemCount }}
     >
-      {/**/}
       {children}
     </CartContext.Provider>
   );

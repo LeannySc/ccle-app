@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import globalStyles from "./CartScreen.styles";
 import { useCart } from "../context/CartContext";
-import { colors } from "../styles/colors"; // Importamos nuestros colores
+import { colors } from "../styles/colors";
 
 export const CartScreen = () => {
   const { cart, removeProductFromCart } = useCart();

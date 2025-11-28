@@ -7,10 +7,13 @@ import { HomeScreen } from "../screens/HomeScreen";
 import { CartScreen } from "../screens/CartScreen";
 import { ProfileScreen } from "../screens/ProfileScreen";
 import { colors } from "../styles/colors";
+import { useCart } from "../context/CartContext";
 
 const Tab = createBottomTabNavigator();
 
 export const TabNavigator = () => {
+  const { cartItemCount } = useCart();
+
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -34,13 +37,21 @@ export const TabNavigator = () => {
           } else {
             iconName = "help-circle";
           }
-
           return <Ionicons name={iconName} size={size} color={color} />;
         },
       })}
     >
       <Tab.Screen name="Inicio" component={HomeScreen} />
-      <Tab.Screen name="Carrito" component={CartScreen} />
+
+      {/**/}
+      <Tab.Screen
+        name="Carrito"
+        component={CartScreen}
+        options={{
+          tabBarBadge: cartItemCount > 0 ? cartItemCount : undefined,
+        }}
+      />
+
       <Tab.Screen name="Perfil" component={ProfileScreen} />
     </Tab.Navigator>
   );
